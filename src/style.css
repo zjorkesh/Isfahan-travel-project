@@ -68,7 +68,7 @@ body {
     background-position: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 80px;
+    grid-gap: 80px;
     padding: 100px 150px;
 
 
