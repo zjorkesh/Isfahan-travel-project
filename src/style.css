@@ -1,9 +1,10 @@
 body {
     max-width: 1800px;
+    font-family: "Poppins", sans-serif;
 }
 
 .hero {
-    background-image: linear-gradient(rgba(40, 42, 54, 0.5), rgba(40, 42, 54, 0.7)), url("/images/Header-Khaju\ Bridge\ in\ Isfahan\,\ Iran.jpeg");
+    background-image: linear-gradient(rgba(40, 42, 54, 0.5), rgba(40, 42, 54, 0.7)), url("/images/Header-meidan\ naghshe\ jahan.jpeg");
     filter: saturate(1.2) hue-rotate(10deg) brightness(1.05);
     background-size: cover;
     background-position: center;
@@ -15,9 +16,10 @@ body {
 }
 
 .hero img {
+    position: relative;
+        top: -50px;
     width: 100px;
     filter: sepia(0.8) saturate(1.4) hue-rotate(350deg) brightness(0.8);
-    padding: 20px 0;
 
 }
 
@@ -59,6 +61,49 @@ body {
     color: white;
 }
 
+.grid-3-columns {
+    background-image: linear-gradient(rgba(39, 32, 68, 0.9), rgba(39, 32, 68, 0.9)), url("/images/Footer-Khaju\ Bridge\ in\ Isfahan\,\ Iran.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px;
+    padding: 100px 150px;
+
+
+}
+
+.grid-3-columns h4 {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin: 0;
+    line-height: 1.5;
+    word-spacing: 1px;
+}
+
+.grid-3-columns .about-city a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(246, 238, 250);
+    font-size: 20px;
+    margin: 0;
+    line-height: 3;
+    text-decoration: none;
+}
+
+p {
+    text-align: justify;
+    font-size: 20px;
+    color: rgb(246, 238, 250);
+}
+
+a {
+    color: rgb(246, 238, 250);
+}
 @media(max-width:980px) {
     .hero {
         padding: 80px 0;
@@ -79,4 +124,18 @@ body {
     .hero h2 {
         font-size: 20px;
     }
+.grid-3-columns {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 50px 20px;
+}
+
+.grid-3-columns h4 {
+    font-size: 20px;
+}
+
+.grid-3-columns .about-city a,
+p {
+    font-size: 15px;
+}
 }
