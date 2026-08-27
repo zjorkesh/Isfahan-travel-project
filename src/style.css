@@ -1,46 +1,73 @@
+:root {
+    --text-color: #67627C;
+    --second-text-color: #C4C2CB;
+}
 body {
     max-width: 1800px;
     font-family: "Poppins", sans-serif;
 }
 
 .hero {
-    background-image: linear-gradient(rgba(40, 42, 54, 0.5), rgba(40, 42, 54, 0.7)), url("/images/Header-meidan\ naghshe\ jahan.jpeg");
+    position: relative;
+        min-height: 100vh;
+    
+        background-image: linear-gradient(rgba(40, 42, 54, 0.5),
+                rgba(40, 42, 54, 0.7)),
+            url("/images/Header-meidan\ naghshe\ jahan.jpeg");
     filter: saturate(1.2) hue-rotate(10deg) brightness(1.05);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 100px 0;
-    font-family: poppins;
+    font-family: Poppins;
     text-align: center;
     color: white;
+    padding: 50px 50px;
 }
 
 .hero img {
-    position: relative;
-        top: -50px;
+    position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
     width: 100px;
 }
 
 .hero h3 {
+    position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%);
     font-size: 25px;
     letter-spacing: 5px;
     margin: 0;
-    line-height: 3;
+    white-space: nowrap;
 }
 
 .hero h1 {
+    position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
     font-size: 80px;
     margin: 0;
-    line-height: 3;
+    white-space: nowrap;
 }
 
 .hero h2 {
+    position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
     font-size: 45px;
     margin: 0;
-    word-spacing: 5px;
+    white-space: nowrap;
 }
 
 .hero .btn {
+    position: absolute;
+        top: 88%;
+        left: 50%;
+        transform: translateX(-50%);
     display: inline-block;
     background-color: white;
     color: black;
@@ -48,17 +75,45 @@ body {
     padding: 10px 20px;
     text-transform: uppercase;
     border-radius: 5px;
-    margin-top: 40px;
-    transition: all 500ms ease-in;
     letter-spacing: 1px;
-
+    transition: all 500ms ease-in;
 }
 
 .hero .btn:hover {
     background-color: #654321;
     color: white;
 }
+.grid-2-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 100px;
+    gap: 50px;
 
+}
+
+.grid-2-columns img {
+    max-width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: opacity 5s ease-in-out;
+}
+
+.grid-2-columns h5 {
+    font-size: 16px;
+    color: gray;
+    letter-spacing: 3px;
+
+}
+
+.grid-2-columns h2 {
+    font-family: poppins;
+    font-size: 20px;
+}
+
+p {
+    text-align: justify;
+    color: var(--text-color);
+}
 .grid-3-columns {
     background-image: linear-gradient(rgba(39, 32, 68, 0.9), rgba(39, 32, 68, 0.9)), url("/images/Footer-Khaju\ Bridge\ in\ Isfahan\,\ Iran.jpeg");
     background-repeat: no-repeat;
@@ -74,7 +129,7 @@ body {
 
 .grid-3-columns h4 {
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
     margin: 0;
     line-height: 1.5;
@@ -86,23 +141,23 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: rgb(246, 238, 250);
-    font-size: 20px;
+    color: var(--second-text-color);
+        font-size: 16px;
     margin: 0;
     line-height: 3;
     text-decoration: none;
 }
 
-p {
+.grid-3-columns p {
     text-align: justify;
-    font-size: 20px;
-    color: rgb(246, 238, 250);
+    font-size: 16px;
+        color: var(--second-text-color);
 }
 
-a {
-    color: rgb(246, 238, 250);
+.grid-3-columns a {
+    color: var(--second-text-color);
 }
-@media(max-width:980px) {
+@media(max-width:900px) {
     .hero {
         padding: 80px 0;
     }
@@ -121,19 +176,23 @@ a {
 
     .hero h2 {
         font-size: 20px;
-    }
+        top: 50%;
+        }
+        
+        .grid-2-columns h2 {
+            font-size: 18px;
+        }
+        
+        .grid-2-columns {
+            grid-template-columns: 1fr;
+            padding: 30px 50px;
+            gap: 20px;
+}
 .grid-3-columns {
     grid-template-columns: 1fr;
     gap: 15px;
     padding: 50px 20px;
 }
 
-.grid-3-columns h4 {
-    font-size: 20px;
-}
 
-.grid-3-columns .about-city a,
-p {
-    font-size: 15px;
-}
 }
