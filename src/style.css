@@ -19,8 +19,6 @@ body {
     position: relative;
         top: -50px;
     width: 100px;
-    filter: sepia(0.8) saturate(1.4) hue-rotate(350deg) brightness(0.8);
-
 }
 
 .hero h3 {
